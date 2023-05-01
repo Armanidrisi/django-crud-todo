@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django files
+*.log
+*.pot
+*.pyc
+local_settings.py
+
+# Configuration files
+*.ini
+*.conf
+*.env
+*.yml
+
+# Editor files
+*~
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Dependency directories
+venv/
+env/
+env*/
+*/venv/
+*/env/
+*/env*/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+

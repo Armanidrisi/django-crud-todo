@@ -1,0 +1,30 @@
+{%extends 'base.html'%} {% block content %}
+<div class="container my-4">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Edit Todo</h5>
+      <form action="/update/{{task.id}}" method="POST">
+        {% csrf_token %}
+        <div class="form-group mb-3">
+          <label for="name">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id=""
+            placeholder="Enter Todo Title"
+            name="title"
+            value="{{task.title}}"
+          />
+        </div>
+        <div class="form-group mb-3">
+          <label for="desc">Description</label>
+          <textarea class="form-control" id="desc" name="description" rows="3">
+{{task.description}}</textarea
+          >
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
