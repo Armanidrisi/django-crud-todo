@@ -37,6 +37,4 @@ build/
 *.egg
 
 # Database Files
-*.sqlite3
-*.sqlite
-*.db
+db.sqlite3
