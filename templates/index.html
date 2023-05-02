@@ -1,13 +1,13 @@
 {%extends 'base.html'%} {% block content %}
 <div class="container my-4">
   {% if alert %} {% if alert_type == 'success' %}
-  <div class="alert alert-success" role="alert">{{ alert }}</div>
+  <div class="alert alert-success" role="alert" id="alert">{{ alert }}</div>
   {% elif alert_type == 'warning' %}
-  <div class="alert alert-warning" role="alert">{{ alert }}</div>
+  <div class="alert alert-warning" role="alert" id="alert">{{ alert }}</div>
   {% elif alert_type == 'danger' %}
-  <div class="alert alert-danger" role="alert">{{ alert }}</div>
+  <div class="alert alert-danger" role="alert" id="alert">{{ alert }}</div>
   {% else %}
-  <div class="alert alert-info" role="alert">{{ alert }}</div>
+  <div class="alert alert-info" role="alert" id="alert">{{ alert }}</div>
   {% endif %} {% endif %}
 
   <div class="card">
@@ -59,7 +59,7 @@
   </div>
 </div>
 <script type="text/javascript" charset="utf-8">
-  const doc = document.querySelector(".alert");
+  const doc = document.querySelector("#alert");
   setTimeout(() => {
     doc.style.display = "None";
   }, 2000);

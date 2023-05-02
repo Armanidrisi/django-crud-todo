@@ -10,11 +10,12 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <link rel="shortcut icon" href="https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Status-mail-task-icon.png" type="image/png" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Todo List</a>
+        <a class="navbar-brand" href="/">Todo List</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -29,10 +30,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">Home</a>
+              <a
+                class="nav-link {% if request.path == '/' %} active {%endif%}"
+                aria-current="page"
+                href="/"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/about">About</a>
+              <a
+                class="nav-link {% if request.path == '/about' %} active {%endif%}"
+                href="/about"
+                >About</a
+              >
             </li>
           </ul>
         </div>
